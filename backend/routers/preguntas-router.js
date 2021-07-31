@@ -97,7 +97,7 @@ router.put('/:idusuario/respuesta/', function(req,res){
         },
         {
             // "respuestas" : {votos:req.body.votos}
-            "respuestas[0]":req.body.votos
+           $set:{ respuestas:[{descripcion: req.body.descripcion, fecha: req.body.fecha, votos: req.body.votos, idUsuario: req.body.idUsuario}]}
         }
     ).then(result=>{
         res.send(result);

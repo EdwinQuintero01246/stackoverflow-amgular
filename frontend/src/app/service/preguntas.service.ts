@@ -35,4 +35,12 @@ export class PreguntasService {
       votos: votos
     });
   }
+  cambiosVotosRes(idusuario:any,informacion:any):Observable<any>{
+    return this.httpClient.put(`http://localhost:8888/preguntas/${idusuario}/respuesta`,{
+      descripcion: informacion.descripcion,
+      fecha: informacion.fecha,
+      votos: informacion.votos,
+      idUsuario: informacion.idUsuario
+    });
+  }
 }

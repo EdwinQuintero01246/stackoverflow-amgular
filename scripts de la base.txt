@@ -14,4 +14,34 @@ db.preguntas.update({_id:ObjectId("6105788a4e64073588476c64")},{$set:{votos:10}}
 //update votos respuesta
 db.preguntas.update({_id:ObjectId("610519359a50d95fd8dec0ca") ,respuesta: {descripcion:"Se lo robaron"} } , {$set:{respuestas:{votos:10}}})
 
+//cambio votos en las respuesta
+db.preguntas.update({_id:ObjectId("6105af3dbbcccd0f902fb342")},{$set:{respuestas:[{descripcion: "con todo ya casi", fecha: "2021-07-09", votos: 13, idUsuario: "2"}]}})
 
+
+db.preguntas.update({
+    _id:ObjectId("6105788a4e64073588476c64"),
+    "respuesta.descripcion":"Se lo robaron"
+},{
+    $set:{
+        respuesta:[{votos:10}]
+        }
+    }
+)
+
+
+db.preguntas.find({
+    _id:ObjectId("6105788a4e64073588476c64"),
+    "respuesta[0].descripcion":"Se lo robaron"
+}).pretty()
+
+
+
+
+
+db.preguntas.find({_id:ObjectId("6105af3dbbcccd0f902fb342")},{respuestas:true}).pretty()
+
+
+db.preguntas.update({_id:ObjectId("6105af3dbbcccd0f902fb342")},{$set:{respuestas:[{descripcion: \"con todo ya casi\", fecha: \"2021-07-09\", votos: 11, idUsuario: \"2\"}]}})
+
+
+{respuestas: [ { descripcion: \"con todo ya casi\", fecha: \"2021-07-09\", votos: 0, idUsuario: \"2\" } ]}

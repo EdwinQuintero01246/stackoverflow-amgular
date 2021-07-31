@@ -141,10 +141,28 @@ export class MainComponent implements OnInit {
       }
     )
   }
-  votarResp(votoPlus:any,votoDB:any){
-    var votosTotal=votoDB+votoPlus;
-    console.log("votos totales: ",votosTotal);
-
+  votarResp(votoPlus:any,data:any,idUsuario:any){
+    //var votosTotal=votoDB+votoPlus;
+    var usuarioConvert = parseInt(data.idUsuario);
+    var votosConvert = parseInt(data.votos);
+    votosConvert= votosConvert+votoPlus;
+    var dataEnviar={
+      descripcion:data.descripcion,
+      fecha: data.fecha,
+      idUsuario: usuarioConvert,
+      votos: votosConvert
+    }
+    console.log("votos totales: ",dataEnviar);
+    console.log("IdUsuario: ",idUsuario);
+    this.preguntasService.cambiosVotosRes(idUsuario,dataEnviar).subscribe(
+      res => {
+        console.log(res);
+        //location.reload();
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
   
 }

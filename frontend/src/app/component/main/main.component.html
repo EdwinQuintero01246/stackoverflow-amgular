@@ -75,9 +75,9 @@
     <!-- Respuesta -->
     <div class="row answer" *ngFor="let respuesta of preguntaOne.respuestas">
       <div class="col-1 text-center">
-        <div><svg class="arrow" (click)="votarResp(1,respuesta.votos)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></div>
+        <div><svg class="arrow" (click)="votarResp(1,respuesta,preguntaOne._id)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></div>
         <div class="h4 text-muted m-0">{{respuesta.votos}}</div>
-        <div><svg class="arrow" (click)="votarResp(-1,respuesta.votos)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></div>
+        <div><svg class="arrow" (click)="votarResp(-1,respuesta,preguntaOne._id)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></div>
       </div>
       <div class="col-10">
         In version 37 you need to do this:
