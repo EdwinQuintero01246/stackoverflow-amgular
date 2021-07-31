@@ -1,0 +1,17 @@
+// ver todos los usuarios
+db.usuarios.find().pretty()
+
+// ver un usuario
+db.usuarios.find({ _id : ObjectId("6104e7df9a50d95fd8dec0ba")}).pretty()
+
+
+
+// ver todas las preguntas
+db.preguntas.find().pretty()
+
+//update votos pregunta
+db.preguntas.update({_id:ObjectId("6105788a4e64073588476c64")},{$set:{votos:10}})
+//update votos respuesta
+db.preguntas.update({_id:ObjectId("610519359a50d95fd8dec0ca") ,respuesta: {descripcion:"Se lo robaron"} } , {$set:{respuestas:{votos:10}}})
+
+

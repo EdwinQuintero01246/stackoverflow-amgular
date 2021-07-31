@@ -1,0 +1,127 @@
+@media (min-width: 1680px) {
+    .col-xxl{
+        width: 16.66666667%;
+    }
+}
+@media (max-width: 1368px) {
+    
+}
+@media (max-width: 1024px) {
+    #mainConfig{
+        padding:0px 50px !important;  
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1140px;
+    }
+}
+@media (max-width: 992px) {
+    #mainConfig{
+        padding:0px 15px !important;  
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 960px;
+    }
+}
+@media (max-width: 768px) {
+    #mainConfig{
+        padding:0px 15px !important;  
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 720px;
+    }
+}
+@media (max-width: 575px) {
+    #mainConfig{
+        padding:0px 5px !important;  
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 540px;
+    }
+   
+}
+.badge-warning {
+    color: #fff!important;
+    background-color: #f8cea1!important;
+}
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    margin-right: 5px;
+}
+.float-right {
+    float: right!important;
+}
+.small-profile-pic {
+    width: 25px;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+.user-text {
+    color: rgb(83, 138, 255);
+}
+.text-muted {
+    color: #6c757d!important;
+}
+.btn-outline-warning {
+    border-color: #F48023;
+    color: #F48023;
+    background-color: transparent;
+}
+.btn-outline-warning:hover {
+    border-color: #F48023;
+    background-color: #F48023;
+    color: white;
+}
+.btn-link {
+    font-weight: 400;
+    color: #007bff;
+    text-decoration: none;
+}
+.question-row {
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 20px 10px 10px 10px;
+}
+.question {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 45px 15px;
+    border-top: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.user-card {
+    background-color: rgb(234, 241, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+.arrow {
+    fill: rgb(173, 173, 173);
+    width: 32px;
+    cursor: pointer;
+}
+pre {
+    background-color: #eeeeee;
+    padding: 26px;
+    margin-top: 5px;
+}
+.answer {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 45px 15px;
+    /* border-top: 1px solid rgb(226, 226, 226); */
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+.error{
+    color: red !important;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
